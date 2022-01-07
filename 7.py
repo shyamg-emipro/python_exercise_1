@@ -3,5 +3,4 @@
 str1 = input("Enter a String: ")
 n = int(input("Enter no of repetitions: "))
 
-for i in range(0, n):
-    print(str1)
+print(n*(str1+" "))

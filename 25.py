@@ -4,9 +4,8 @@ strlist = ['abca', 'aeioua', 'aiwa', 'song', 'computer', 'a']
 
 
 def filterstr(str1):
-    if len(str1) >= 2:
-        if str1[0] == str1[len(str1) - 1]:
-            return True
+    if len(str1) >= 2 and str1[0] == str1[-1]:
+        return True
     else:
         return False
 

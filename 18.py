@@ -7,14 +7,6 @@
 
 color_list1 = ["White", "Black", "Red"]
 color_list2 = ["Red", "Green"]
-li1 = []
-li2 = []
-for i in range(len(color_list1)):
-    for j in range(len(color_list2)):
-        if color_list1[i] == color_list2[j]:
-            li1.append(color_list1[i])
-            break
-    else:
-        li2.append(color_list1[i])
-print("Common Colors in both lists : ", set(li1))
-print("color_list1 - color_list2 : ", set(li2))
+
+print("Common Colors in both lists : ", set(color_list1).intersection(set(color_list2)))
+print("color_list1 - color_list2 : ", set(color_list1).difference(set(color_list2)))

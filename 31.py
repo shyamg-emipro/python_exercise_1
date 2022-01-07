@@ -7,7 +7,5 @@ dict1 = {
     "Gujarat": 90,
     "Computer": 90
 }
-sum1 = 0
-for x in dict1.values():
-    sum1 = sum1 + x
-print("Sum of all subject marks is ", sum1)
+
+print("Sum of all subject marks is ", sum(dict1.values()))

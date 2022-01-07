@@ -6,8 +6,4 @@
 li = [1, 5, 38, 3]
 
 ipnumber = int(input("Enter a Number:  "))
-
-if ipnumber in li:
-    print(bool(1))
-else:
-    print(bool(0))
+print(True if ipnumber in li else False)

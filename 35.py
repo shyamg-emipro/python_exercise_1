@@ -3,10 +3,6 @@
 # New Dictionary after dropping empty items: {'c1': 'Red', 'c2': 'Green'}
 
 dict1 = {'c1': 'Red', 'c2': 'Green', 'c3': None}
+dict2 = {key: value for (key, value) in dict1.items() if value is not None}
 
-for x in dict1:
-    if dict1[x] == None:
-        del dict1[x]
-        break
-
-print(dict1)
+print(dict2)

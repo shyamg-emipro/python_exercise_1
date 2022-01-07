@@ -5,7 +5,7 @@
 dict1 = {'key1': 1, 'key2': 3, 'key3': 2}
 dict2 = {'key1': 1, 'key2': 2}
 
-for x in range(len(dict2)):
-    for y in range(len(dict1)):
-        if list(dict1.items())[y] == list(dict2.items())[x]:
-            print(list(dict1.items())[y], " is present in both dict1 and dict2")
+for x in dict2.items():
+    for y in dict1.items():
+        if x == y:
+            print(x, " is present in both dict1 and dict2")

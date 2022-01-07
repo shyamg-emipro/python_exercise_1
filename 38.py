@@ -16,18 +16,19 @@ class Product:
         self.price = price
 
 
-class Order(Product):
-    def __init__(self, o_id, name, price, qty):
+class Customer:
+    def __init__(self, c_name, email):
+        self.c_name = c_name
+        self.email = email
+
+
+class Order(Product, Customer):
+    def __init__(self, o_id, c_name, email, name, qty, price):
         self.o_id = o_id
         self.qty = qty
         self.total = qty * price
         super(Order, self).__init__(name, price)
-
-class Customer(Order):
-    def __init__(self, o_id, c_name, email, name, qty, price):
-        super(Customer, self).__init__(o_id, name, price, qty)
-        self.c_name = c_name
-        self.email = email
+        super(Product, self).__init__(c_name, email)
 
     def print_order_details(self):
         print("Order No : ", self.o_id)
@@ -39,5 +40,5 @@ class Customer(Order):
         print("Order Total is : ", self.total)
 
 
-customer = Customer(1, 'Sanjay Patel', 'sunjay@dumy.com', 'Pencil', 15, 20)
-customer.print_order_details()
+order = Order(1, 'Sanjay Patel', 'sunjay@dumy.com', 'Pencil', 15, 20)
+order.print_order_details()

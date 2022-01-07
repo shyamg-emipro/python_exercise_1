@@ -6,5 +6,5 @@
 
 dict1 = {'a': 2, 'x': 8, 'z': 1}
 
-for x in dict1:
-    print(x, " -- ", dict1[x])
+for key, value in dict1.items():
+    print(key, " -- ", value)

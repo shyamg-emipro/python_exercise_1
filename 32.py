@@ -9,7 +9,7 @@
 
 students = {'Aex': {'class': 'V', 'roll_id': 2}, 'Puja': {'class': 'V', 'roll_id': 3}}
 
-for x in students:
-    print(x)
-    for y in students[x]:
-        print(y, " : ", students[x][y])
+for name, details in students.items():
+    print(name)
+    for key, value in details.items():
+        print(key, " : ", value)

@@ -18,6 +18,6 @@ dict2 = {'Cierra Vega': (6.2, 70),
 #
 # print(list(filter(myfilter, dict2)))
 
-for x in dict2:
-    if dict2[x][0] >= 6.0 and dict2[x][1] >= 70:
-        print(x, ":", dict2[x])
+for key, value in dict2.items():
+    if value[0] >= 6.0 and value[1] >= 70:
+        print(key, ":", value)

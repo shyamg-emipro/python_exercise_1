@@ -9,5 +9,5 @@ details = {
     "Age": 39,
     "Address": "Bohemian Street, Lane 3, Grex County"
 }
-for i in range(len(details)):
-    print(list(details)[i], " : ", list(details.values())[i])
+for key, value in details.items():
+    print(key, " : ", value)
